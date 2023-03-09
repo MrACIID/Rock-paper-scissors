@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Rock-Paper-Scissors</title>
     <script>
 
         function getComputerChoice() {
@@ -46,13 +46,17 @@
                 return "You lose ! Scissors beats Paper"
 
             }
+            return "Please enter either 'Rock' 'Paper' or 'Scissors'"
         }
 
 
-        const playerSelection = prompt("");
+        const playerSelection = prompt("Please enter either 'Rock' 'Paper' or 'Scissors'", "Rock");
         const computerSelection = getComputerChoice();
         console.log(playRound(playerSelection, computerSelection));
 
+        function game() {
+
+        }
 
 
     </script>
