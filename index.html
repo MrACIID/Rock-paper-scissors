@@ -10,9 +10,38 @@
         function getComputerChoice() {
             let possibleChoice = ['Rock', 'Paper', 'Scissors'];
             const randomChoice = Math.floor(Math.random() * possibleChoice.length);
-            console.log(possibleChoice[randomChoice])
+            let computerChoice = possibleChoice[randomChoice]
+            return computerChoice
         }
         getComputerChoice()
+        console.log(getComputerChoice())
+
+
+        function playRound(playerSelection, computerSelection) {
+
+            if (playerSelection || computerSelection == "Rock" && (playerSelection || computerSelection == "Paper")) {
+                return "you lose paper"
+            }
+            return "you win"
+
+
+        }
+
+
+        const playerSelection = prompt("");
+        const computerSelection = getComputerChoice();
+
+        console.log(playRound(playerSelection, computerSelection));
+
+        function game() {
+
+            for (let i = 0; i < 5; i++) {
+                playRound() * i
+            }
+
+        }
+
+
     </script>
 </head>
 
