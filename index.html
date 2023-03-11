@@ -8,6 +8,7 @@
     <title>Rock-Paper-Scissors</title>
     <script>
 
+        //Generate random Computer choice.
         function getComputerChoice() {
             let possibleChoice = ['Rock', 'Paper', 'Scissors'];
             const randomChoice = Math.floor(Math.random() * possibleChoice.length);
@@ -15,11 +16,16 @@
             return computerChoice
         }
 
+
         let userScore = 0
         let computerScore = 0
         const playerSelection = ""
 
+
+        //Game logic of rock-paper-scissors, comparing playerSelection with computerSelection.
         function playRound(playerSelection, computerSelection) {
+
+            ///Prompt to ask player choice, between rock-paper-scissors
 
             playerSelection = prompt("Please enter either 'Rock' 'Paper' or 'Scissors'", "Rock");
 
@@ -60,6 +66,8 @@
             return "Please enter either 'Rock' 'Paper' or 'Scissors'"
         }
 
+
+        ///Final scoring function getting called after one game() to display the final score.
         function finalScore() {
             if (userScore > computerScore) {
                 return "You won the game !"
@@ -72,6 +80,9 @@
             }
         }
 
+
+
+        ///Main game() function that plays 5 rounds of a rock-paper-scissors ( playRound() ), and display the final score.
         function game() {
 
             for (let i = 0; i < 5; i++) {
