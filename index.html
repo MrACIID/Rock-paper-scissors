@@ -7,15 +7,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock-Paper-Scissors</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <script src="index.js" defer></script>
+    <script src="https://kit.fontawesome.com/10351c0feb.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
     <div class="wrapper">
+        <header>
+            <h1>Rock Paper Scissors</h1>
+            <h2>First to 5 wins !</h2>
+        </header>
+        <div class="score">
+            <div id="userScore">0</div>
+            <div>:</div>
+            <div id="computerScore">0</div>
+        </div>
         <div id="btn">
-            <button data="Rock">Rock</button>
-            <button data="Paper">Paper</button>
-            <button data="Scissors">Scissors</button>
+            <button data="Rock"><i class="fa-solid fa-hand-back-fist" data="Rock"></i></button>
+            <button data="Paper"><i class="fa-solid fa-hand" data="Paper"></i></button>
+            <button data="Scissors"><i class="fa-solid fa-hand-scissors" data="Scissors"></i></button>
         </div>
         <div class="wrapperresult">
             <div id="pickedChoices"></div>
