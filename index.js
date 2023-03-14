@@ -12,11 +12,16 @@ function getComputerChoice() {
 
 let userScore = 0
 let computerScore = 0
+let compChoice
+
+
 
 
 //Game logic of rock-paper-scissors, comparing playerSelection with computerSelection.
 function playRound(playerSelection) {
     let computerSelection = getComputerChoice()
+    compChoice = computerSelection
+
 
 
     console.log(`The computer picked: ` + computerSelection)
@@ -57,11 +62,25 @@ function playRound(playerSelection) {
 }
 
 
-let Choice = document.getElementById('btn');
+let choicesBtn = document.getElementById('btn');
 
-Choice.addEventListener('click', (e) => {
+choicesBtn.addEventListener('click', (e) => {
     let selectedBtn = e.target
     let choiceValue = selectedBtn.getAttribute('data')
     playerSelection = choiceValue
-    console.log(playRound(playerSelection))
+
+    // Display results
+    let resultsText = document.createElement("p")
+    resultsText.innerHTML = `${playRound(playerSelection)}`
+
+    document.getElementById("results").appendChild(resultsText)
+
+    // Display pickedChoices
+    let pickedChoicesText = document.createElement("p")
+    pickedChoicesText.innerHTML = `You picked: ${playerSelection} 
+    &nbsp &nbsp &nbsp
+    The Computer picked:  ${compChoice}`
+
+    document.getElementById("pickedChoices").appendChild(pickedChoicesText)
+
 })
